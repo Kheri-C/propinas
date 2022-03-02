@@ -35,17 +35,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun interfaceRoundTip(){
         var roundTip = binding.totalTip.text.toString()
-        var roundTip2 = roundTip.toDoubleOrNull()
+        var roundTipD = roundTip.toDoubleOrNull()
         var roundAmount = binding.totalAmount.text.toString()
-        var roundAmount2 = roundAmount.toDoubleOrNull()
+        var roundAmountD = roundAmount.toDoubleOrNull()
 
-        if(roundTip2 == null || roundAmount2 == null){
+        if(roundTipD == null || roundAmountD == null){
             return
         }
-        roundTip2 = round(roundTip2)
-        binding.totalTip.text = "${roundTip2}"
-        roundAmount2 = round(roundAmount2)
-        binding.totalTip.text = "${roundAmount2}"
+        roundTipD = round(roundTipD)
+        binding.totalTip.text = "${roundTipD}"
+        roundAmountD = round(roundAmountD)
+        binding.totalTip.text = "${roundAmountD}"
     }
 
     private fun interfaceCalculateTip(percentage: Double){
